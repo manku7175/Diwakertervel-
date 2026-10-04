@@ -1,210 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Diwakertervel - आरामदायक सफर, आपकी मंज़िल के लिए भरोसेमंद साथ।">
-<title>Diwakertervel | Tour & Travel</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#e52b4b"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+<title>DiwakerTravel</title>
 </head>
 <body>
-<header class="header">
-  <div class="container nav">
-    <div class="logo">DIWAKER<span>TRAVEL</span></div>
-    <button class="menu" onclick="toggleMenu()">☰</button>
-    <nav id="nav">
-      <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
-      <a href="#gallery">Gallery</a><a href="#contact">Contact</a>
-    </nav>
-  </div>
+<header class="topbar">
+  <div class="brand"><img src="logo.svg" class="logo"><div><div class="brand-name">DIWAKER<span>TRAVEL</span></div><small>Bus • Taxi • Tour & Travels</small></div></div>
+  <button class="icon-btn" id="menuBtn">☰</button>
 </header>
-
-<section id="home" class="hero">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <p class="tag">TOUR & TRAVELS</p>
-    <h1>आरामदायक सफर,<br><span>आपकी मंज़िल</span> के लिए भरोसेमंद साथ</h1>
-    <p>खाटू श्याम • सांवलिया सेठ • मथुरा • रामदेवरा • उज्जैन</p>
-    <div class="buttons">
-      <a class="btn primary" href="https://wa.me/919462007175?text=Hello%20Diwakertervel,%20mujhe%20tour%20ki%20information%20chahiye." target="_blank">WhatsApp करें</a>
-      <a class="btn light" href="tel:+919462007175">Call Now</a>
-    </div>
+<main>
+<section class="hero">
+  <div class="hero-copy"><p class="eyebrow">TRAVEL SMART • TRAVEL EASY</p><h1>Book your journey<br><b>with DiwakerTravel</b></h1><p>Bus booking, taxi, tour packages and travel support — all in one place.</p></div>
+  <div class="booking-card">
+    <div class="tabs"><button class="tab active" data-type="bus">🚌 Bus</button><button class="tab" data-type="taxi">🚕 Taxi</button></div>
+    <div class="field-row"><label>From<input id="from" value="Kota" placeholder="e.g. Kota"></label><button class="swap" id="swapBtn">⇄</button><label>To<input id="to" value="Jaipur" placeholder="e.g. Jaipur"></label></div>
+    <label class="date-field">Travel date<input id="date" type="date"></label>
+    <button class="primary" id="searchBtn">Search Buses</button>
   </div>
 </section>
-
-<section id="about" class="section">
-  <div class="container two-col">
-    <div>
-      <p class="eyebrow">ABOUT US</p>
-      <h2>आपका सफर, हमारी जिम्मेदारी</h2>
-      <p>Diwakertervel आपके लिए आरामदायक, सुरक्षित और यादगार यात्रा अनुभव देने के लिए समर्पित है। धार्मिक यात्रा, लोकल ड्यूटी और टूर ट्रैवल के लिए हम आपकी यात्रा को आसान बनाने में मदद करते हैं।</p>
-      <p>परिवार, दोस्तों या ग्रुप के साथ यात्रा हो—अपनी जरूरत के अनुसार यात्रा की जानकारी और बुकिंग के लिए हमसे संपर्क करें।</p>
-    </div>
-    <div class="info-card">
-      <div>🚗 <b>Comfortable Travel</b><small>आरामदायक सफर</small></div>
-      <div>🛕 <b>Religious Tours</b><small>धार्मिक यात्राएं</small></div>
-      <div>📞 <b>Easy Booking</b><small>आसान बुकिंग</small></div>
-      <div>🤝 <b>Trusted Service</b><small>भरोसेमंद सेवा</small></div>
-    </div>
-  </div>
+<section class="quick">
+<button class="quick-card" data-scroll="services"><span>🚌</span><b>Bus</b><small>Book tickets</small></button>
+<button class="quick-card" data-scroll="services"><span>🚕</span><b>Taxi</b><small>Local & outstation</small></button>
+<button class="quick-card" data-scroll="destinations"><span>🛕</span><b>Tour</b><small>Popular places</small></button>
+<button class="quick-card" data-scroll="contact"><span>💬</span><b>Help</b><small>Contact us</small></button>
 </section>
-
-<section id="services" class="section alt">
-  <div class="container">
-    <p class="eyebrow">OUR SERVICES</p>
-    <h2>हमारी सेवाएं</h2>
-    <div class="cards">
-      <article class="card"><span>🛕</span><h3>Religious Tours</h3><p>खाटू श्याम, सांवलिया सेठ, मथुरा, रामदेवरा, उज्जैन आदि के लिए यात्रा सुविधा।</p></article>
-      <article class="card"><span>🚕</span><h3>Local Duty</h3><p>लोकल यात्रा और शहर के अंदर वाहन सुविधा के लिए संपर्क करें।</p></article>
-      <article class="card"><span>🚌</span><h3>Tour Packages</h3><p>परिवार और ग्रुप के लिए आपकी जरूरत के अनुसार टूर प्लान।</p></article>
-      <article class="card"><span>📅</span><h3>Trip Planning</h3><p>यात्रा की तारीख, रूट और जरूरत के अनुसार यात्रा की जानकारी।</p></article>
-    </div> <section id="booking" class="section">
-  <div class="container">
-    <p class="eyebrow">BOOKING CALENDAR</p>
-    <h2>गाड़ी की बुकिंग</h2>
-
-    <div class="booking-box">
-      <label>Booking की तारीख</label>
-      <input type="date" id="bookingDate">
-
-      <label>ग्राहक का नाम</label>
-      <input type="text" id="customerName" placeholder="नाम लिखें">
-
-      <label>मोबाइल नंबर</label>
-      <input type="tel" id="customerPhone" placeholder="मोबाइल नंबर">
-
-      <label>गाड़ी</label>
-      <select id="vehicle">
-        <option value="">गाड़ी चुनें</option>
-        <option>ERTIGA VXI</option>
-        <option>CELERIO</option>
-        <option>MAHINDRA BOLERO NEU N4</option>
-      </select>
-
-      <label>कहाँ जाना है?</label>
-      <input type="text" id="destination" placeholder="जैसे: खाटू श्याम">
-
-      <button type="button" onclick="saveBooking()">
-        Booking Save करें
-      </button>
-    </div>
-
-    <h3>📅 मेरी Bookings</h3>
-    <div id="bookingList"></div>
-  </div>
-</section>
-
-<script>
-function saveBooking() {
-  const booking = {
-    date: document.getElementById("bookingDate").value,
-    name: document.getElementById("customerName").value,
-    phone: document.getElementById("customerPhone").value,
-    vehicle: document.getElementById("vehicle").value,
-    destination: document.getElementById("destination").value
-  };
-
-  if (!booking.date || !booking.name || !booking.vehicle) {
-    alert("कृपया तारीख, नाम और गाड़ी भरें।");
-    return;
-  }
-
-  let bookings = JSON.parse(localStorage.getItem("bookings") || "[]");
-  bookings.push(booking);
-  localStorage.setItem("bookings", JSON.stringify(bookings));
-
-  alert("Booking Save हो गई ✅");
-  showBookings();
-}
-
-function showBookings() {
-  const list = document.getElementById("bookingList");
-  const bookings = JSON.parse(localStorage.getItem("bookings") || "[]");
-
-  list.innerHTML = "";
-
-  bookings.forEach((b, i) => {
-  list.innerHTML += `
-    <div class="booking-card">
-      <b>📅 ${b.date}</b><br>
-      👤 ${b.name}<br>
-      📞 ${b.phone}<br>
-      🚗 ${b.vehicle}<br>
-      📍 ${b.destination}<br><br>
-
-      <button type="button" onclick="deleteBooking(${i})">
-        ❌ Booking हटाएँ
-      </button>
-    </div>
-  `;
-});
-}
-
-function deleteBooking(index) {
-  if (confirm("क्या आप यह booking हटाना चाहते हैं?")) {
-    let bookings = JSON.parse(localStorage.getItem("bookings") || "[]");
-
-    bookings.splice(index, 1);
-
-    localStorage.setItem("bookings", JSON.stringify(bookings));
-
-    showBookings();
-
-    alert("Booking हटा दी गई ✅");
-  }
-}
-
-showBookings();
-</script>
-  </div>
-</section>
-
-<section id="gallery" class="section">
-  <div class="container">
-    <p class="eyebrow">GALLERY</p>
-    <h2>हमारे सफर की झलक</h2>
-    <div class="gallery">
-      <div class="destination">
-  <img src="ujjain_page-0001.jpg" alt="Ujjain">
-  <h3>उज्जैन</h3>
-      </div>
-     <div class="destination">
-  <img src="khatushyam_page-0001.jpg" alt="Khatu Shyam">
-  <h3>खाटू श्याम</h3>
-</div>
-
-<div class="destination">
-  <img src="sawariya seth_page-0001.jpg" alt="Sanwaliya Seth">
-  <h3>सांवलिया सेठ</h3>
-</div>
-
-<div class="destination">
-  <img src="Ramdevra_page-0001.jpg" alt="Ramdevra">
-  <h3>रामदेवरा</h3>
-</div>
-    </div>
-    <p class="hint">अपनी असली यात्रा/गाड़ी की photos यहाँ आसानी से replace कर सकते हैं।</p>
-  </div>
-</section>
-
-<section id="mayankdiwaker24785@gmail.com" class="section contact">
-  <div class="container">
-    <p class="eyebrow">CONTACT</p>
-    <h2>आज ही अपनी यात्रा की जानकारी लें</h2>
-    <div class="contact-grid">
-      <a class="contact-box" href="tel:+919462007175">📞 <b>9462007175</b><small>Call / WhatsApp</small></a>
-      <a class="contact-box" href="https://wa.me/918955831875?text=Hello%20Diwakertervel,%20mujhe%20tour%20ki%20information%20chahiye." target="_blank">💬 <b>8955831875</b><small>WhatsApp</small></a>
-      <div class="contact-box">📍 <b>Diwakertervel</b><small>Tour & Travels</small></div>
-    </div>
-  </div>
-</section>
-
-<a class="float-wa" href="https://wa.me/919462007175?text=Hello%20Diwakertervel,%20mujhe%20travel%20booking%20ki%20information%20chahiye." target="_blank">💬 WhatsApp</a>
-
-<footer><div class="container"><b>DIWAKERTERVEL</b><p>© 2026 Diwakertervel. All rights reserved.</p></div></footer>
-<script>
-function toggleMenu(){document.getElementById('nav').classList.toggle('show')}
-document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('show')));
-</script>
-</body>
-</html>
+<section id="results" class="section hidden"><div class="section-head"><div><p class="eyebrow">AVAILABLE OPTIONS</p><h2>Choose your bus</h2></div><span id="routeLabel" class="pill"></span></div><div id="busList"></div></section>
+<section id="seats" class="section hidden"><div class="section-head"><div><p class="eyebrow">SEAT SELECTION</p><h2>Select your seat</h2></div></div><div class="seat-wrap"><div class="driver">🚍 DRIVER</div><div id="seatGrid" class="seat-grid"></div><p class="legend">Available • Selected • Booked</p></div><button class="primary full" id="passengerBtn">Continue</button></section>
+<section id="passenger" class="section hidden"><div class="section-head"><div><p class="eyebrow">PASSENGER DETAILS</p><h2>Enter passenger details</h2></div></div><div class="form-card"><label>Full name<input id="pname" placeholder="Passenger name"></label><label>Mobile number<input id="pmobile" inputmode="numeric" placeholder="10 digit mobile"></label><label>Email (optional)<input id="pemail" type="email" placeholder="you@example.com"></label><button class="primary full" id="confirmBtn">Confirm Booking</button></div></section>
+<section id="ticket" class="section hidden"><div class="ticket"><div class="ticket-top"><img src="logo.svg" class="logo small"><div><b>DIWAKERTRAVEL</b><small>Booking Confirmation</small></div><span class="status">CONFIRMED</span></div><div class="ticket-route"><span id="ticketFrom">Kota</span><b>→</b><span id="ticketTo">Jaipur</span></div><div class="ticket-grid"><div><small>Passenger</small><b id="ticketName">-</b></div><div><small>Seat</small><b id="ticketSeat">-</b></div><div><small>Date</small><b id="ticketDate">-</b></div><div><small>Booking ID</small><b id="bookingId">-</b></div></div><button class="secondary full" id="newBooking">New Booking</button></div></section>
+<section id="services" class="section"><div class="section-head"><div><p class="eyebrow">OUR SERVICES</p><h2>Everything for your journey</h2></div></div><div class="service-grid"><article><span>🚌</span><h3>Bus Booking</h3><p>Search routes and select your seat.</p></article><article><span>🚕</span><h3>Taxi Service</h3><p>Local, airport and outstation travel.</p></article><article><span>🧳</span><h3>Tour Packages</h3><p>Comfortable trips to popular destinations.</p></article><article><span>🎫</span><h3>Travel Support</h3><p>Booking help and customer assistance.</p></article></div></section>
+<section id="destinations" class="section"><div class="section-head"><div><p class="eyebrow">POPULAR DESTINATIONS</p><h2>Plan your next trip</h2></div></div><div class="destination-grid">
+<article><img src="ujjain.svg"><b>Ujjain</b><small>Mahakal Darshan</small></article>
+<article><img src="khatu-shyam.svg"><b>Khatu Shyam</b><small>Temple Tour</small></article>
+<article><img src="sanwaliya-seth.svg"><b>Sanwaliya Seth</b><small>Darshan Tour</small></article>
+<article><img src="ramdevra.svg"><b>Ramdevra</b><small>Religious Tour</small></article>
+</div></section>
+<section id="contact" class="section contact"><div><p class="eyebrow">NEED HELP?</p><h2>Talk to DiwakerTravel</h2><p>For booking support, taxi and tour enquiries, contact us.</p></div><div class="contact-actions"><a class="primary link-btn" href="tel:+919462007175">📞 Call 9462007175</a><a class="whatsapp link-btn" href="https://wa.me/919462007175?text=Hello%20DiwakerTravel%2C%20I%20want%20to%20book%20a%20trip." target="_blank">💬 WhatsApp</a></div><a class="second-phone" href="tel:+918955831875">📞 8955831875</a></section>
+</main>
+<nav class="bottom-nav"><button data-scroll="services">⌂<small>Home</small></button><button data-scroll="results">🚌<small>Bus</small></button><button data-scroll="destinations">🧳<small>Trips</small></button><button data-scroll="contact">👤<small>Support</small></button></nav>
+<script src="app.js"></script>
+</body></html>
