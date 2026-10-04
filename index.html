@@ -58,7 +58,86 @@
       <article class="card"><span>🚕</span><h3>Local Duty</h3><p>लोकल यात्रा और शहर के अंदर वाहन सुविधा के लिए संपर्क करें।</p></article>
       <article class="card"><span>🚌</span><h3>Tour Packages</h3><p>परिवार और ग्रुप के लिए आपकी जरूरत के अनुसार टूर प्लान।</p></article>
       <article class="card"><span>📅</span><h3>Trip Planning</h3><p>यात्रा की तारीख, रूट और जरूरत के अनुसार यात्रा की जानकारी।</p></article>
+    </div> <section id="booking" class="section">
+  <div class="container">
+    <p class="eyebrow">BOOKING CALENDAR</p>
+    <h2>गाड़ी की बुकिंग</h2>
+
+    <div class="booking-box">
+      <label>Booking की तारीख</label>
+      <input type="date" id="bookingDate">
+
+      <label>ग्राहक का नाम</label>
+      <input type="text" id="customerName" placeholder="नाम लिखें">
+
+      <label>मोबाइल नंबर</label>
+      <input type="tel" id="customerPhone" placeholder="मोबाइल नंबर">
+
+      <label>गाड़ी</label>
+      <select id="vehicle">
+        <option value="">गाड़ी चुनें</option>
+        <option>गाड़ी 1</option>
+        <option>गाड़ी 2</option>
+        <option>गाड़ी 3</option>
+      </select>
+
+      <label>कहाँ जाना है?</label>
+      <input type="text" id="destination" placeholder="जैसे: खाटू श्याम">
+
+      <button type="button" onclick="saveBooking()">
+        Booking Save करें
+      </button>
     </div>
+
+    <h3>📅 मेरी Bookings</h3>
+    <div id="bookingList"></div>
+  </div>
+</section>
+
+<script>
+function saveBooking() {
+  const booking = {
+    date: document.getElementById("bookingDate").value,
+    name: document.getElementById("customerName").value,
+    phone: document.getElementById("customerPhone").value,
+    vehicle: document.getElementById("vehicle").value,
+    destination: document.getElementById("destination").value
+  };
+
+  if (!booking.date || !booking.name || !booking.vehicle) {
+    alert("कृपया तारीख, नाम और गाड़ी भरें।");
+    return;
+  }
+
+  let bookings = JSON.parse(localStorage.getItem("bookings") || "[]");
+  bookings.push(booking);
+  localStorage.setItem("bookings", JSON.stringify(bookings));
+
+  alert("Booking Save हो गई ✅");
+  showBookings();
+}
+
+function showBookings() {
+  const list = document.getElementById("bookingList");
+  const bookings = JSON.parse(localStorage.getItem("bookings") || "[]");
+
+  list.innerHTML = "";
+
+  bookings.forEach((b, i) => {
+    list.innerHTML += `
+      <div class="booking-card">
+        <b>📅 ${b.date}</b><br>
+        👤 ${b.name}<br>
+        📞 ${b.phone}<br>
+        🚗 ${b.vehicle}<br>
+        📍 ${b.destination}
+      </div>
+    `;
+  });
+}
+
+showBookings();
+</script>
   </div>
 </section>
 
@@ -72,17 +151,17 @@
   <h3>उज्जैन</h3>
       </div>
      <div class="destination">
-  <img src="khatu-shyam.jpg" alt="Khatu Shyam">
+  <img src="khatushyam_page-0001.jpg" alt="Khatu Shyam">
   <h3>खाटू श्याम</h3>
 </div>
 
 <div class="destination">
-  <img src="sanwaliya-seth.jpg" alt="Sanwaliya Seth">
+  <img src="sawariya seth_page-0001.jpg" alt="Sanwaliya Seth">
   <h3>सांवलिया सेठ</h3>
 </div>
 
 <div class="destination">
-  <img src="ramdevra.jpg" alt="Ramdevra">
+  <img src="Ramdevra_page-0001.jpg" alt="Ramdevra">
   <h3>रामदेवरा</h3>
 </div>
     </div>
