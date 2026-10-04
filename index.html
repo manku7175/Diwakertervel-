@@ -76,9 +76,9 @@
       <label>गाड़ी</label>
       <select id="vehicle">
         <option value="">गाड़ी चुनें</option>
-        <option>गाड़ी 1</option>
-        <option>गाड़ी 2</option>
-        <option>गाड़ी 3</option>
+        <option>ERTIGA VXI</option>
+        <option>CELERIO</option>
+        <option>MAHINDRA BOLERO NEU N4</option>
       </select>
 
       <label>कहाँ जाना है?</label>
@@ -124,16 +124,34 @@ function showBookings() {
   list.innerHTML = "";
 
   bookings.forEach((b, i) => {
-    list.innerHTML += `
-      <div class="booking-card">
-        <b>📅 ${b.date}</b><br>
-        👤 ${b.name}<br>
-        📞 ${b.phone}<br>
-        🚗 ${b.vehicle}<br>
-        📍 ${b.destination}
-      </div>
-    `;
-  });
+  list.innerHTML += `
+    <div class="booking-card">
+      <b>📅 ${b.date}</b><br>
+      👤 ${b.name}<br>
+      📞 ${b.phone}<br>
+      🚗 ${b.vehicle}<br>
+      📍 ${b.destination}<br><br>
+
+      <button type="button" onclick="deleteBooking(${i})">
+        ❌ Booking हटाएँ
+      </button>
+    </div>
+  `;
+});
+}
+
+function deleteBooking(index) {
+  if (confirm("क्या आप यह booking हटाना चाहते हैं?")) {
+    let bookings = JSON.parse(localStorage.getItem("bookings") || "[]");
+
+    bookings.splice(index, 1);
+
+    localStorage.setItem("bookings", JSON.stringify(bookings));
+
+    showBookings();
+
+    alert("Booking हटा दी गई ✅");
+  }
 }
 
 showBookings();
