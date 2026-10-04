@@ -3,42 +3,41 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#e52b4b"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
-<title>DiwakerTravel</title>
+<title>Diwaker Travel Agency</title>
 </head>
 <body>
 <header class="topbar">
-  <div class="brand"><img src="logo.svg" class="logo"><div><div class="brand-name">DIWAKER<span>TRAVEL</span></div><small>Bus • Taxi • Tour & Travels</small></div></div>
+  <div class="brand"><img src="logo.svg" class="logo"><div><div class="brand-name">DIWAKER<span>TRAVEL</span>AGENCY<span></div><small>Taxi • Tour & Travels</small></div></div>
   <button class="icon-btn" id="menuBtn">☰</button>
 </header>
 <main>
 <section class="hero">
-  <div class="hero-copy"><p class="eyebrow">TRAVEL SMART • TRAVEL EASY</p><h1>Book your journey<br><b>with DiwakerTravel</b></h1><p>Bus booking, taxi, tour packages and travel support — all in one place.</p></div>
+  <div class="hero-copy"><p class="eyebrow">TRAVEL SMART • TRAVEL EASY</p><h1>Book your journey<br><b>with DiwakerTravel</b></h1><p>Taxi booking, tour packages and travel support — all in one place.</p></div>
   <div class="booking-card">
-    <div class="tabs"><button class="tab active" data-type="bus">🚌 Bus</button><button class="tab" data-type="taxi">🚕 Taxi</button></div>
+    <div class="tabs"></button><button class="tab" data-type="taxi">🚕 Taxi</button></div>
     <div class="field-row"><label>From<input id="from" value="Kota" placeholder="e.g. Kota"></label><button class="swap" id="swapBtn">⇄</button><label>To<input id="to" value="Jaipur" placeholder="e.g. Jaipur"></label></div>
     <label class="date-field">Travel date<input id="date" type="date"></label>
     <button class="primary" id="searchBtn">Search Buses</button>
   </div>
 </section>
 <section class="quick">
-<button class="quick-card" data-scroll="services"><span>🚌</span><b>Bus</b><small>Book tickets</small></button>
 <button class="quick-card" data-scroll="services"><span>🚕</span><b>Taxi</b><small>Local & outstation</small></button>
-<button class="quick-card" data-scroll="destinations"><span>🛕</span><b>Tour</b><small>Popular places</small></button>
+<button class="quick-card" data-scroll="destinations"><span>🛕</span><b>Tour</b><small>popular palace ,Ujjain , sanvariya Seth ji , Khatu Shyam Ji , Ramdevra ji , Omkareshwar</small></button>
 <button class="quick-card" data-scroll="contact"><span>💬</span><b>Help</b><small>Contact us</small></button>
 </section>
-<section id="results" class="section hidden"><div class="section-head"><div><p class="eyebrow">AVAILABLE OPTIONS</p><h2>Choose your bus</h2></div><span id="routeLabel" class="pill"></span></div><div id="busList"></div></section>
+<section id="results" class="section hidden"><div class="section-head"><div><p class="eyebrow">AVAILABLE OPTIONS</p><h2>Choose your TAXI</h2></div><span id="routeLabel" class="pill"></span></div><div id="TaxiList"></div></section>
 <section id="seats" class="section hidden"><div class="section-head"><div><p class="eyebrow">SEAT SELECTION</p><h2>Select your seat</h2></div></div><div class="seat-wrap"><div class="driver">🚍 DRIVER</div><div id="seatGrid" class="seat-grid"></div><p class="legend">Available • Selected • Booked</p></div><button class="primary full" id="passengerBtn">Continue</button></section>
 <section id="passenger" class="section hidden"><div class="section-head"><div><p class="eyebrow">PASSENGER DETAILS</p><h2>Enter passenger details</h2></div></div><div class="form-card"><label>Full name<input id="pname" placeholder="Passenger name"></label><label>Mobile number<input id="pmobile" inputmode="numeric" placeholder="10 digit mobile"></label><label>Email (optional)<input id="pemail" type="email" placeholder="you@example.com"></label><button class="primary full" id="confirmBtn">Confirm Booking</button></div></section>
-<section id="ticket" class="section hidden"><div class="ticket"><div class="ticket-top"><img src="logo.svg" class="logo small"><div><b>DIWAKERTRAVEL</b><small>Booking Confirmation</small></div><span class="status">CONFIRMED</span></div><div class="ticket-route"><span id="ticketFrom">Kota</span><b>→</b><span id="ticketTo">Jaipur</span></div><div class="ticket-grid"><div><small>Passenger</small><b id="ticketName">-</b></div><div><small>Seat</small><b id="ticketSeat">-</b></div><div><small>Date</small><b id="ticketDate">-</b></div><div><small>Booking ID</small><b id="bookingId">-</b></div></div><button class="secondary full" id="newBooking">New Booking</button></div></section>
-<section id="services" class="section"><div class="section-head"><div><p class="eyebrow">OUR SERVICES</p><h2>Everything for your journey</h2></div></div><div class="service-grid"><article><span>🚌</span><h3>Bus Booking</h3><p>Search routes and select your seat.</p></article><article><span>🚕</span><h3>Taxi Service</h3><p>Local, airport and outstation travel.</p></article><article><span>🧳</span><h3>Tour Packages</h3><p>Comfortable trips to popular destinations.</p></article><article><span>🎫</span><h3>Travel Support</h3><p>Booking help and customer assistance.</p></article></div></section>
+<section id="ticket" class="section hidden"><div class="ticket"><div class="ticket-top"><img src="logo.svg" class="logo small"><div><b>DIWAKER TRAVEL AGENCY</b><small>Booking Confirmation</small></div><span class="status">CONFIRMED</span></div><div class="ticket-route"><span id="ticketFrom">Kota</span><b>→</b><span id="ticketTo">Jaipur</span></div><div class="ticket-grid"><div><small>Passenger</small><b id="ticketName">-</b></div><div><small>Seat</small><b id="ticketSeat">-</b></div><div><small>Date</small><b id="ticketDate">-</b></div><div><small>Booking ID</small><b id="bookingId">-</b></div></div><button class="secondary full" id="newBooking">New Booking</button></div></section>
+<section id="services" class="section"><div class="section-head"><div><p class="eyebrow">OUR SERVICES</p><h2>Everything for your journey</h2></div></div><div class="service-grid"><article><span>🚌</span><h3>Taxi Booking</h3><p>Search routes.</p></article><article><span>🚕</span><h3>Taxi Service</h3><p>Local, airport and outstation travel.</p></article><article><span>🧳</span><h3>Tour Packages</h3><p>Comfortable trips to popular destinations.</p></article><article><span>🎫</span><h3>Travel Support</h3><p>Booking help and customer assistance.</p></article></div></section>
 <section id="destinations" class="section"><div class="section-head"><div><p class="eyebrow">POPULAR DESTINATIONS</p><h2>Plan your next trip</h2></div></div><div class="destination-grid">
 <article><img src="ujjain.svg"><b>Ujjain</b><small>Mahakal Darshan</small></article>
 <article><img src="khatu-shyam.svg"><b>Khatu Shyam</b><small>Temple Tour</small></article>
 <article><img src="sanwaliya-seth.svg"><b>Sanwaliya Seth</b><small>Darshan Tour</small></article>
 <article><img src="ramdevra.svg"><b>Ramdevra</b><small>Religious Tour</small></article>
 </div></section>
-<section id="contact" class="section contact"><div><p class="eyebrow">NEED HELP?</p><h2>Talk to DiwakerTravel</h2><p>For booking support, taxi and tour enquiries, contact us.</p></div><div class="contact-actions"><a class="primary link-btn" href="tel:+919462007175">📞 Call 9462007175</a><a class="whatsapp link-btn" href="https://wa.me/919462007175?text=Hello%20DiwakerTravel%2C%20I%20want%20to%20book%20a%20trip." target="_blank">💬 WhatsApp</a></div><a class="second-phone" href="tel:+918955831875">📞 8955831875</a></section>
+<section id="contact" class="section contact"><div><p class="eyebrow">NEED HELP?</p><h2>Talk to Diwaker Travel Agency</h2><p>For booking support, taxi and tour enquiries, contact us.</p></div><div class="contact-actions"><a class="primary link-btn" href="tel:+919462007175">📞 Call 9462007175</a><a class="whatsapp link-btn" href="https://wa.me/919462007175?text=Hello%20DiwakerTravel%2C%20I%20want%20to%20book%20a%20trip." target="_blank">💬 WhatsApp</a></div><a class="second-phone" href="tel:+918955831875">📞 8955831875</a></section>
 </main>
-<nav class="bottom-nav"><button data-scroll="services">⌂<small>Home</small></button><button data-scroll="results">🚌<small>Bus</small></button><button data-scroll="destinations">🧳<small>Trips</small></button><button data-scroll="contact">👤<small>Support</small></button></nav>
+<nav class="bottom-nav"><button data-scroll="services">⌂<small>Home</small></button><button data-scroll="results">🚕<small>Taxi</small></button><button data-scroll="destinations">🧳<small>Trips</small></button><button data-scroll="contact">👤<small>Support</small></button></nav>
 <script src="app.js"></script>
 </body></html>
